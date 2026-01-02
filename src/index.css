@@ -2,95 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* $nark Design System — "Your Money, My Two Cents" 💰🔥
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core palette */
+    --background: 220 20% 4%;
+    --foreground: 60 9% 94%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 16% 8%;
+    --card-foreground: 60 9% 94%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 16% 10%;
+    --popover-foreground: 60 9% 94%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Emerald success accents */
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Muted/secondary */
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 60 5% 75%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Amber humor highlights */
+    --accent: 43 96% 56%;
+    --accent-foreground: 220 20% 4%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Red shame states */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 94%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Shame pulse glow */
+    --shame: 0 72% 51%;
+    --shame-foreground: 60 9% 94%;
 
-    --radius: 0.5rem;
+    /* Success green */
+    --success: 160 84% 39%;
+    --success-foreground: 220 20% 4%;
 
-    --sidebar-background: 0 0% 98%;
+    /* Warning amber */
+    --warning: 43 96% 56%;
+    --warning-foreground: 220 20% 4%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --border: 220 14% 18%;
+    --input: 220 14% 14%;
+    --ring: 160 84% 39%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 0.75rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 16% 6%;
+    --sidebar-foreground: 60 9% 94%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 14% 14%;
+    --sidebar-accent-foreground: 60 9% 94%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 160 84% 39%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 4%;
+    --foreground: 60 9% 94%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 16% 8%;
+    --card-foreground: 60 9% 94%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 16% 10%;
+    --popover-foreground: 60 9% 94%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 60 5% 75%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 43 96% 56%;
+    --accent-foreground: 220 20% 4%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 94%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 14% 18%;
+    --input: 220 14% 14%;
+    --ring: 160 84% 39%;
+
+    --sidebar-background: 220 16% 6%;
+    --sidebar-foreground: 60 9% 94%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 14% 14%;
+    --sidebar-accent-foreground: 60 9% 94%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 160 84% 39%;
   }
 }
 
@@ -100,6 +111,71 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-shame-pulse {
+    animation: shame-pulse 1.5s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out forwards;
+  }
+
+  .animate-stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .animate-stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .animate-stagger-3 {
+    animation-delay: 0.3s;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-200 hover:shadow-lg hover:shadow-primary/20;
+  }
+}
+
+@keyframes shame-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--shame) / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px hsl(var(--shame) / 0.6);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
